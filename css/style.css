@@ -1,0 +1,44 @@
+body {
+    font-family: serif;
+}
+header{
+    h1{
+        font-size: 60px;
+        font-weight: 700;
+    }
+}
+main {
+    .bgMain {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.355), rgba(0, 0, 0, 0.355)), url(../img/cust.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        ::placeholder{
+            color: #fff;
+        }
+    }
+    input.form-control{
+        background-color: #222222eb;
+
+        &:focus {
+            background-color: #000 !important;
+            transform: scale(1.1);
+        }
+        
+    }
+
+    button.letSpacing.btn {
+        transition: 0.5s;
+
+        &:hover {
+            letter-spacing: 4px;
+        }
+    }
+    td{
+        padding: 10px;
+    }
+    th{
+        background-color: #000;
+    }
+
+}

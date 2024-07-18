@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-dark">
+    <header class="text-center text-white my-4">
+        <h1>Easy</h1>
+        <p class="fs-3">customer management system</p>
+    </header>
+    <main>
+        <div class="bgMain py-5">
+            <div class="container w-75">
+                <input oninput="validate(this)" class="fName form-control my-3 border-0 text-white" id="fName"
+                    type="text" placeholder="First Name">
+                <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                    Enter the correct name, special letters and numbers are not allowed
+                </div>
+                <input oninput="validate(this)" class="lName form-control my-3 border-0 text-white" id="lName"
+                    type="text" placeholder="Last Name">
+                <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                    Enter the correct name, special letters and numbers are not allowed
+                </div>
+                <input oninput="validate(this)" class="date form-control my-3 border-0 text-white" id="date" type="date"
+                    placeholder="Enter Date">
+                <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                    Please enter the correct date
+                </div>
+                <input oninput="validate(this)" class="amount form-control my-3 border-0 text-white" id="amount"
+                    type="number" placeholder="Enter Amount">
+                <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                    enter the correct amount
+                </div>
+                <button class="btnCreate letSpacing btn btn-light w-100 rounded-5">Create</button>
+                <button class="btnUpdate letSpacing btn btn-primary w-100 rounded-5 d-none">Update</button>
+            </div>
+        </div>
+        <div class="container py-5">
+            <div class="pb-5">
+                <div class="d-flex flex-sm-nowrap flex-wrap">
+                    <button onclick="getSearshMood(this.id)" id="searchByName"
+                        class="btnSearchByName letSpacing btn btn-light w-100 rounded-5 mb-2 mb-sm-0">search By
+                        Name</button>
+                    <button onclick="getSearshMood(this.id)" id="searchByAmount"
+                        class="btnSearchByAmount letSpacing btn btn-light w-100 rounded-5">search By Amount</button>
+                </div>
+                <input onkeyup="inputSearch(this.value)" class="form-control search my-3 border-0 text-white bg-white"
+                    id="search" type="text" placeholder="Search">
+            </div>
+            <div class="pb-3" id="deletAll">
+            </div>
+            <table class="w-100 text-white text-center">
+                <tr>
+                    <th class="p-2">ID</th>
+                    <th class="p-2">NAME</th>
+                    <th class="p-2">DATE</th>
+                    <th class="p-2">AMOUNT</th>
+                    <th class="p-2">UPDATE</th>
+                    <th class="p-2">DELETE</th>
+                </tr>
+                <tbody id="myData">
+
+                </tbody>
+            </table>
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
